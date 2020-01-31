@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="hola_angular">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="angular.min.js"></script>
+    <script src="angular-route.min.js"></script>
+    <script src="main.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body ng-controller="controlador as lista">
+    <div id="menu">
+        <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </div>
+
+    <h2>aniadir datos a la lista </h2>
+    <input type="text" ng-model='lista.nombre'>
+    <input type="text" ng-model='lista.precio'>
+    <input type="button" value="Aniadir" ng-click='lista.addProducto()'>
+
+    <select name="" id="" ng-model='lista.productoSeleccionado'>
+        <option ng-repeat='producto in lista.productos' value="{{producto.di}}">{{producto.nombre}}</option>
+    </select>
+
+
+
+    <br><br><br>
+    <h2>Crear una lista</h2>
+    <br>
+    {{2+2}}
+    <li ng-repeat="producto in lista.productos">
+        {{producto.nombre}}
+    </li>
+</body>
+
+</html>
